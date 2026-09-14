@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.app-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .app-layout-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    height: calc(100vh - 110px);
+    overflow: hidden;
+  }
+
+  .scroll-column {
+    height: 100%;
+    overflow-y: auto !important;
+    padding-right: 6px;
+  }
+}
+
+.scroll-column::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll-column::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+.scroll-column::-webkit-scrollbar-thumb {
+  background: #c7d2fe;
+  border-radius: 8px;
+}
+
+.scroll-column::-webkit-scrollbar-thumb:hover {
+  background: #818cf8;
+}
